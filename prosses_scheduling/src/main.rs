@@ -161,17 +161,8 @@ fn main() {
     let (tx_to_proc_handler, rx_from_proc_thread) = mpsc::channel();
     let (t_rec_for_average, r_req_for_average) = mpsc::channel();
     let (t_ans, r_ans) = mpsc::channel();
-    const P1:&str = "This is a simulation of two process management algorithms:\n\
-                    1) Round Robin\n\
-                    2) First-Come First-Serve\n\
-                    This program try to simulate real scheduling so, theres some script to do this\n\
-                    for example when you all process and enter exit program take all them and try to\n\
-                    give them to scheduler at their (Entry time * Quantum time) milli second after\n\
-                    scheduler starts its work.\n\
-                    So its not exact as we calculate on paper mathematically :))\n";
-    println!("{}\n", P1);
-    println!("An other things is you can change Quantum time and Btime by chang code\nnow the default is {} and {} respectively.\n", QTIME,BTIME);
-    println!("Any way you can chose what algorithm prefer to use\n\
+
+    println!("Chose what algorithm prefer to use\n\
               1 for RR and 2 is for FCFS\n\
               Witch one do you want to use? Enter number: ");
 
