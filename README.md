@@ -1,2 +1,2 @@
-# os_course
+# Process schedulig simulation
 Implemention of sum algorithm and apps.
